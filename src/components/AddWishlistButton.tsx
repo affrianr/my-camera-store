@@ -10,13 +10,16 @@ export default function AddWishlistButton({ data }: { data: Product }) {
 
   const handleWishlist = async () => {
     setIsPending(true);
-    const response = await fetch("http://localhost:3000/api/wishlist", {
-      method: "POST",
-      body: JSON.stringify(data._id),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://my-camera-store-nfjw.vercel.app/api/wishlist",
+      {
+        method: "POST",
+        body: JSON.stringify(data._id),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     if (!response.ok) {
       throw new Error("ADD WISHLIST ERROR");

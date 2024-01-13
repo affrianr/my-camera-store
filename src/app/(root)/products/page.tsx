@@ -17,7 +17,7 @@ export default function Home() {
   async function fetchProducts() {
     if (search) {
       const dataProduct = await fetch(
-        `http://localhost:3000/api/products?search=${search}`
+        `https://my-camera-store-nfjw.vercel.app/api/products?search=${search}`
       );
 
       const products: Pagination = await dataProduct.json();
@@ -30,7 +30,7 @@ export default function Home() {
       }
     } else {
       const dataProduct = await fetch(
-        `http://localhost:3000/api/products?page=${page}`
+        `https://my-camera-store-nfjw.vercel.app/api/products?page=${page}`
       );
       // selain ngasih Promise<Product[]> di atas, bisa dikasih type/interface ketika mendeklarasikan di sini, const products: Product[] = await data.json()
       const products: Pagination = await dataProduct.json();

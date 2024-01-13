@@ -20,13 +20,16 @@ export default function Login() {
       email: formData.get("email"),
       password: formData.get("password"),
     };
-    const res = await fetch("http://localhost:3000/api/users/login", {
-      method: "POST",
-      body: JSON.stringify(user),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res = await fetch(
+      "https://my-camera-store-nfjw.vercel.app//api/users/login",
+      {
+        method: "POST",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const resp = await res.json();
 
     if (!res.ok) {

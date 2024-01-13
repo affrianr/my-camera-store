@@ -8,7 +8,9 @@ import { useEffect, useState } from "react";
 export default function Wishlist() {
   const [data, setData] = useState<Wishlist[]>([]);
   async function fetchWishlist() {
-    const res = await fetch("http://localhost:3000/api/wishlist");
+    const res = await fetch(
+      "https://my-camera-store-nfjw.vercel.app/api/wishlist"
+    );
     const data = (await res.json()) as Wishlist[];
 
     setData(data);

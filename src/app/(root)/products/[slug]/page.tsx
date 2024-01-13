@@ -5,9 +5,12 @@ import { Metadata, ResolvingMetadata } from "next";
 async function fetchDetailProduct(slug: string): Promise<Product> {
   "use server";
   try {
-    const hasil = await fetch("http://localhost:3000/api/products/" + slug, {
-      cache: "no-cache",
-    });
+    const hasil = await fetch(
+      "https://my-camera-store-nfjw.vercel.app/api/products/" + slug,
+      {
+        cache: "no-cache",
+      }
+    );
     const response = (await hasil.json()) as Product;
 
     if (!response) {

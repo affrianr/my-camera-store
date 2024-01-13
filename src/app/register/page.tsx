@@ -5,18 +5,21 @@ import ErrorHandler from "@/components/ErrorHandler";
 export default function Register() {
   const handleRegister = async (formData: FormData) => {
     "use server";
-    const res = await fetch("http://localhost:3000/api/users/register", {
-      method: "POST",
-      body: JSON.stringify({
-        name: formData.get("name"),
-        username: formData.get("username"),
-        email: formData.get("email"),
-        password: formData.get("password"),
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res = await fetch(
+      "my-camera-store-nfjw-htirl9509-affrianrs-projects.vercel.app/api/users/register",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          name: formData.get("name"),
+          username: formData.get("username"),
+          email: formData.get("email"),
+          password: formData.get("password"),
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const resp = await res.json();
 
     if (!res.ok) {

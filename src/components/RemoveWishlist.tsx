@@ -13,7 +13,7 @@ export default function RemoveWishlist({
   deleted: boolean;
 }) {
   async function deleteWishlist() {
-    await fetch("http://localhost:3000/api/wishlist/", {
+    await fetch("https://my-camera-store-nfjw.vercel.app/api/wishlist/", {
       method: "DELETE",
       body: JSON.stringify(id),
       headers: {

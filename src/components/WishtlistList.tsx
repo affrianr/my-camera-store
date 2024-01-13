@@ -15,7 +15,8 @@ export default function WishlistList({ data }: Props) {
 
   async function fetchProduct() {
     const res = await fetch(
-      "http://localhost:3000/api/products/id/" + data.productId
+      "https://my-camera-store-nfjw.vercel.app/api/products/id/" +
+        data.productId
     );
     const result = (await res.json()) as Product;
 
