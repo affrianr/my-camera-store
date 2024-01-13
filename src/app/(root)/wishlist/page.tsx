@@ -32,11 +32,7 @@ export default function Wishlist() {
                     Product name
                   </h2>
                 </div>
-                <div className="hidden px-4 lg:block lg:w-2/12">
-                  <h2 className="font-bold text-gray-500 dark:text-gray-400">
-                    Price
-                  </h2>
-                </div>
+
                 <div className="w-auto px-4 md:w-1/6 lg:w-2/12 ">
                   <h2 className="font-bold text-gray-500 dark:text-gray-400">
                     Action

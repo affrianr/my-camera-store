@@ -49,14 +49,7 @@ export default function WishlistList({ data }: Props) {
               </div>
             </div>
           </div>
-          <div className="hidden px-4 lg:block lg:w-2/12">
-            <p className="text-lg font-bold text-blue-500 dark:text-gray-400">
-              ${(product?.price - product?.price * 0.39).toFixed(2)}
-            </p>
-            <span className="text-xs text-gray-500 line-through dark:text-gray-400">
-              ${product?.price}
-            </span>
-          </div>
+
           <div className="w-auto px-4 md:w-1/6 lg:w-2/12 ">
             <div className="inline-flex items-center px-4 font-semibold text-gray-500 border border-gray-200 rounded-md dark:border-gray-700 ">
               <RemoveWishlist
