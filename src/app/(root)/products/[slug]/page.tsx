@@ -20,20 +20,6 @@ async function fetchDetailProduct(slug: string): Promise<Product> {
   }
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-  parent: ResolvingMetadata;
-}): Promise<Metadata> {
-  const product = fetchDetailProduct(params.slug);
-
-  return {
-    title: (await product).name,
-    description: (await product).description,
-  };
-}
-
 export default async function DetailProduct({
   params,
 }: {
