@@ -21,7 +21,7 @@ export default function Login() {
       password: formData.get("password"),
     };
     const res = await fetch(
-      "https://my-camera-store-nfjw.vercel.app//api/users/login",
+      "https://my-camera-store-nfjw.vercel.app/api/users/login",
       {
         method: "POST",
         body: JSON.stringify(user),
